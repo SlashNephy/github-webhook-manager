@@ -32,12 +32,12 @@
     "typescript": "5.2.2"
   },
   "packageManager": "yarn@3.6.4",
+  "engines": {
+    "node": ">=20"
+  },
   "eslintConfig": {
     "extends": [
       "@slashnephy/eslint-config"
     ]
-  },
-  "engines": {
-    "node": ">=20"
   }
 }
