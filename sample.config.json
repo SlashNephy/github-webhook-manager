@@ -1,0 +1,55 @@
+{
+  "dryRun": true,
+  "githubToken": "xxx",
+  "users": [
+    {
+      "type": "user",
+      "username": "YourGitHubUsername",
+      "webhooks": [
+        {
+          "events": ["*"],
+          "url": "https://discord.com/api/webhooks/xxx/xxx/github"
+        },
+        {
+          "events": ["watch"],
+          "url": "https://discord.com/api/webhooks/xxx/xxx/github"
+        },
+        {
+          "events": ["issues", "issue_comment"],
+          "url": "https://discord.com/api/webhooks/xxx/xxx/github"
+        },
+        {
+          "events": ["fork"],
+          "url": "https://discord.com/api/webhooks/xxx/xxx/github"
+        }
+      ]
+    },
+    {
+      "type": "org",
+      "username": "YourOrgName",
+      "webhooks": [
+        {
+          "events": ["*"],
+          "url": "https://discord.com/api/webhooks/xxx/xxx/github"
+        },
+        {
+          "events": ["watch"],
+          "url": "https://discord.com/api/webhooks/xxx/xxx/github"
+        },
+        {
+          "events": ["issues", "issue_comment"],
+          "url": "https://discord.com/api/webhooks/xxx/xxx/github"
+        },
+        {
+          "events": ["fork"],
+          "url": "https://discord.com/api/webhooks/xxx/xxx/github"
+        }
+      ]
+    }
+  ],
+  "unarchiveRepository": false,
+  "cleanUp": {
+    "enabled": false,
+    "ignoredWebhookUrls": []
+  }
+}

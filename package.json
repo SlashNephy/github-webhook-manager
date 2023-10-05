@@ -1,0 +1,43 @@
+{
+  "name": "github-webhook-manager",
+  "version": "0.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SlashNephy/github-webhook-manager"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "format": "concurrently -n format: 'yarn:format:*'",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:prettier": "yarn lint:prettier --write",
+    "lint": "concurrently -n lint: 'yarn:lint:*'",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
+    "start": "ts-node bin/update-webhooks.ts"
+  },
+  "dependencies": {
+    "@octokit/rest": "20.0.2",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "@slashnephy/eslint-config": "2.0.24",
+    "@slashnephy/prettier-config": "1.0.15",
+    "@types/node": "20.8.2",
+    "concurrently": "8.2.1",
+    "eslint": "8.50.0",
+    "prettier": "3.0.3",
+    "ts-node": "10.9.1",
+    "typescript": "5.2.2"
+  },
+  "packageManager": "yarn@3.6.4",
+  "eslintConfig": {
+    "extends": [
+      "@slashnephy/eslint-config"
+    ]
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
