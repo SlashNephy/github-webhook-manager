@@ -118,7 +118,7 @@ async function updateGitHubRepository(
           })
       }
     })
-    .filter((x): x is NonNullable<typeof x> => !!x)
+    .filter((x): x is NonNullable<typeof x> => Boolean(x))
 
   const orphanedWebhooks = findOrphanedWebhooks(
     existingWebhooks,
